@@ -1,0 +1,14 @@
+<div class="container">
+    <h3>新規作成ページ</h3>
+    <%= form_tag("/posts") do %>
+        <div class="form-group">
+            <%= label_tag "form-title", "Title" %>
+            <%= text_field :posts, :title, id:"form-title", class:"form-control", placeholder:"title" %>
+        </div>
+        <div class="form-group">
+            <%= label_tag "form-title", "Content" %>
+            <%= text_field :posts, :body, id:"form-content", class:"form-control",placeholder:"content" %>
+        </div>
+            <%= submit_tag "Create", class:"btn btn-primary" %>
+    <% end %>
+</div>
