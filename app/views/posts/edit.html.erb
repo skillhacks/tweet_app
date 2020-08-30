@@ -1,6 +1,6 @@
 <div class="container">
-    <h3>新規作成ページ</h3>
-    <%= form_tag("/posts") do %>
+    <h3>編集ページ</h3>
+    <%= form_tag("/posts/"+@post.id.to_s,:method=>:patch) do %>
         <div class="form-group">
             <%= label_tag "form-title", "タイトル" %>
             <%= text_field :posts, :title, id:"form-title", class:"form-control" %>
